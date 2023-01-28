@@ -1,13 +1,46 @@
 import * as React from "react";
+import { useRef, useCallback, useState } from "react";
 import Webcam from "react-webcam";
-
-const Camera = () =>{
-
+import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
+import IconButton from '@mui/material/IconButton';
+const Camera = ({setLaunch}) =>{
+    const cameraRef = useRef(null);
+    const capture = useCallback(()=>{
+        const imgSrc = cameraRef.current.getScreenshot();
+        setLaunch(false);
+        console.log("captured");
+    },
+    [cameraRef]    
+    );
 return(
-<Webcam
-  screenshotFormat="image/jpeg"
+<div>
+    <Webcam
+        screenshotFormat="image/jpeg"
+        audio={false}
+        ref={cameraRef}
+        style={{ 
+            width: "100%",
+            height: "100%",
+            position: "absolute",
+            left: "50%",
+            marginLeft: "-50%",
+            objectFit: "cover",
+            objectPosition: "center",
+    }}
+    />
+    <IconButton 
+        onClick={capture}
+        aria-label="take picture"
+        style={{
+            position: 'absolute',
+            bottom: '0',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+    }}>
+        <CircleOutlinedIcon className="svg_icons" />
+    </IconButton>
+</div>
 
-/>
 )
 };
 
