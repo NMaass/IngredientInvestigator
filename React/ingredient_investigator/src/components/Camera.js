@@ -3,15 +3,16 @@ import { useRef, useCallback, useState } from "react";
 import Webcam from "react-webcam";
 import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
 import IconButton from '@mui/material/IconButton';
-const Camera = ({setLaunch}) =>{
+const Camera = ({setLaunch, setImage, sendImage}) =>{
     const cameraRef = useRef(null);
     const capture = useCallback(()=>{
         const imgSrc = cameraRef.current.getScreenshot();
+        sendImage(imgSrc);
         setLaunch(false);
-        console.log("captured");
     },
     [cameraRef]    
     );
+
 return(
 <div>
     <Webcam

@@ -1,7 +1,7 @@
 import React from "react";
 import IngredientsAccordian from "./IngredientsAccordian";
 
-const Results = () => {
+const Results = ({ingredients}) => {
     return (
         <div>
             <IngredientsAccordian/>

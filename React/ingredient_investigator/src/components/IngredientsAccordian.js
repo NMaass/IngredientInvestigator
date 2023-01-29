@@ -5,38 +5,25 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-export default function IngredientsAccordian(){
+const IngredientsAccordian = ({ingredient}) => {
     return (
         <div>
             <Accordian>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="pael1a-content"
-                    id="panel1a-header"
+                    id="panel1aheader"
                 >
-                    <Typography>Peanuts</Typography>
+                    <Typography>{ingredient.HazardLe} {ingredient.IngredientName}</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
-                        This is the description for why peanuts might be dangerous
+                        {ingredient.Description}
                     </Typography>
                 </AccordionDetails>
             </Accordian>
-            <Accordian>
-                <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="pael1a-content"
-                    id="panel1a-header"
-                >
-                    <Typography>Almonds</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>
-                        This is the description for why almonds might be dangerous
-                    </Typography>
-                </AccordionDetails>
-            </Accordian>
-         
         </div>
     )
 }
+
+export default IngredientsAccordian;
