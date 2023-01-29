@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Ingredient-Investigator/static/css/main.6eecdd1f.css",
-    "main.js": "/Ingredient-Investigator/static/js/main.a92512b1.js",
+    "main.js": "/Ingredient-Investigator/static/js/main.7b40994a.js",
     "static/js/787.66cc7d47.chunk.js": "/Ingredient-Investigator/static/js/787.66cc7d47.chunk.js",
     "index.html": "/Ingredient-Investigator/index.html",
     "main.6eecdd1f.css.map": "/Ingredient-Investigator/static/css/main.6eecdd1f.css.map",
-    "main.a92512b1.js.map": "/Ingredient-Investigator/static/js/main.a92512b1.js.map",
+    "main.7b40994a.js.map": "/Ingredient-Investigator/static/js/main.7b40994a.js.map",
     "787.66cc7d47.chunk.js.map": "/Ingredient-Investigator/static/js/787.66cc7d47.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6eecdd1f.css",
-    "static/js/main.a92512b1.js"
+    "static/js/main.7b40994a.js"
   ]
 }
