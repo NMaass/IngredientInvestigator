@@ -1,10 +1,16 @@
 import React from "react";
-import IngredientsAccordian from "./IngredientsAccordian";
+import IngredientList from "./IngredientsList";
 
 const Results = ({ingredients}) => {
     return (
         <div>
-            <IngredientsAccordian/>
+            Results
+            <h1>
+                {ingredients.HazardValue}
+                <br/>
+                {ingredients.HazardText}
+            </h1>
+            <IngredientList ingredients={ingredients.Ingredients}/>
         </div>
     );
 }

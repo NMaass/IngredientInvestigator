@@ -5,7 +5,8 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-const IngredientsAccordian = ({ingredient}) => {
+const IngredientsAccordian = ({name, hazard, description}) => {
+    console.log("accordion",name,hazard,description)
     return (
         <div>
             <Accordian>
@@ -14,11 +15,11 @@ const IngredientsAccordian = ({ingredient}) => {
                     aria-controls="pael1a-content"
                     id="panel1aheader"
                 >
-                    <Typography>{ingredient.HazardLe} {ingredient.IngredientName}</Typography>
+                    <Typography>{hazard} {name}</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
-                        {ingredient.Description}
+                        {description}
                     </Typography>
                 </AccordionDetails>
             </Accordian>

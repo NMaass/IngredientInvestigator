@@ -7,32 +7,30 @@ import axios from "axios";
 function App() {
   const [launch, setLaunch] = useState(true);
   const [image, setImage] = useState(null);
-  const [ingredients, setIngredients] = useState({"data":{
-    "Hazard Value": 2,
-    "Hazard Text": "Safe",
+  const [ingredients, setIngredients] = useState({
+    "HazardValue": "2",
+    "HazardText": "Safe",
     "Ingredients":{
       "Ingredient Name 1" : {
-        "Hazard Level": 2,
+        "HazardLevel": "2",
         "Description": "This is a very long description. Lorem ipsum dolor sit ahmet",
       },
       "Ingredient Name 2" : {
-        "Hazard Level": 5,
+        "HazardLevel": "5",
         "Description": "This is a very long description. Lorem ipsum dolor sit ahmet",
       },
     }
-  }});
+  });
 
   const sendImage = async(event) => {
-    const form = new FormData();
-    form.append('image',image, 'image.jpeg');
     try{
       const response = await axios({
-        method: "POST",
+        method: "GET",
         url: "/api/upload/file",
-        data: form,
-        headers: {...form.getHeaders()},
+        data: image,
+        headers: "image/png;base64",
       })
-      setIngredients(response.data)
+      setIngredients(response)
     }
     catch(error) {
       console.log(error);
@@ -40,7 +38,8 @@ function App() {
   }
   return (
     <div className="App">
-      {launch ?  <Camera setLaunch={setLaunch} setImage={setImage} sendImage={sendImage}/>: <Results ingredients={ingredients} />}
+      {launch ?   <Camera setLaunch={setLaunch} setImage={setImage}/>: 
+                  <Results ingredients={ingredients} />}
 
     </div>
   );
