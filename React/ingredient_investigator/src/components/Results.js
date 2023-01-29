@@ -1,15 +1,19 @@
 import React from "react";
 import IngredientList from "./IngredientsList";
 import { threatLevel } from "./threatLevel";
+import Typography from "@mui/material/Typography";
 
 const Results = ({ ingredients }) => {
     return (
         <div>
-            <h1 style={{ color: `${threatLevel[ingredients.HazardValue]}` }}>
+            <Typography
+                variant="h1"
+                style={{ color: `${threatLevel[ingredients.HazardValue]}` }}
+            >
                 {ingredients.HazardValue}
-            </h1>
-            <br />
-            {ingredients.HazardText}
+                <br />
+                {ingredients.HazardText}
+            </Typography>
 
             <IngredientList ingredients={ingredients.Ingredients} />
         </div>
