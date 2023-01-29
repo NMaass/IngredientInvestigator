@@ -8,7 +8,7 @@ function App() {
   const [launch, setLaunch] = useState(true);
   const [image, setImage] = useState(null);
   const [ingredients, setIngredients] = useState({
-    "HazardValue": "2",
+    "HazardValue": "4   ",
     "HazardText": "Safe",
     "Ingredients":{
       "Ingredient Name 1" : {
@@ -24,12 +24,7 @@ function App() {
 
   const sendImage = async(event) => {
     try{
-      const response = await axios({
-        method: "GET",
-        url: "/api/upload/file",
-        data: image,
-        headers: "image/png;base64",
-      })
+      const response = await axios.get("/api/upload/file", image,"image/png;base64",)
       setIngredients(response)
     }
     catch(error) {
