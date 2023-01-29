@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Ingredient-Investigator/static/css/main.6eecdd1f.css",
-    "main.js": "/Ingredient-Investigator/static/js/main.7b40994a.js",
-    "static/js/787.66cc7d47.chunk.js": "/Ingredient-Investigator/static/js/787.66cc7d47.chunk.js",
-    "index.html": "/Ingredient-Investigator/index.html",
-    "main.6eecdd1f.css.map": "/Ingredient-Investigator/static/css/main.6eecdd1f.css.map",
-    "main.7b40994a.js.map": "/Ingredient-Investigator/static/js/main.7b40994a.js.map",
-    "787.66cc7d47.chunk.js.map": "/Ingredient-Investigator/static/js/787.66cc7d47.chunk.js.map"
+    "main.css": "/IngredientInvestigator/static/css/main.6eecdd1f.css",
+    "main.js": "/IngredientInvestigator/static/js/main.9a04f667.js",
+    "static/js/787.66cc7d47.chunk.js": "/IngredientInvestigator/static/js/787.66cc7d47.chunk.js",
+    "index.html": "/IngredientInvestigator/index.html",
+    "main.6eecdd1f.css.map": "/IngredientInvestigator/static/css/main.6eecdd1f.css.map",
+    "main.9a04f667.js.map": "/IngredientInvestigator/static/js/main.9a04f667.js.map",
+    "787.66cc7d47.chunk.js.map": "/IngredientInvestigator/static/js/787.66cc7d47.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6eecdd1f.css",
-    "static/js/main.7b40994a.js"
+    "static/js/main.9a04f667.js"
   ]
 }
